@@ -15,4 +15,10 @@ final class GenillonNathanController extends AbstractController
             'controller_name' => 'GenillonNathanController',
         ]);
     }
+
+    #[Route("/genillon/nathan/cv", name: "app_cv")]
+    public function cv(): Response
+    {
+        return $this->render("genillon_nathan/cv.html.twig",);
+    }
 }
