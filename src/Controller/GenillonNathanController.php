@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class GenillonNathanController extends AbstractController
 {
-    #[Route('/genillon/nathan', name: 'app_genillon_nathan')]
+    #[Route('/', name: 'app_genillon_nathan')]
     public function index(): Response
     {
         return $this->render('genillon_nathan/index.html.twig', [
@@ -16,9 +16,14 @@ final class GenillonNathanController extends AbstractController
         ]);
     }
 
-    #[Route("/genillon/nathan/cv", name: "app_cv")]
+    #[Route("/cv", name: "app_cv")]
     public function cv(): Response
     {
         return $this->render("genillon_nathan/cv.html.twig",);
+    }
+    #[Route("/portfolio", name: "app_portfolio")]
+    public function portfolio(): Response
+    {
+        return $this->render("genillon_nathan/portfolio.html.twig",);
     }
 }
