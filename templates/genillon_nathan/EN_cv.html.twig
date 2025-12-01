@@ -4,9 +4,9 @@
 
 {% block body %}
     <style>
-        /* Conserver le style de base mais texte noir */
+        /* Keep base style but text in black */
         body {
-            color: #000; /* texte noir */
+            color: #000;
         }
 
         .container-cv {
@@ -115,11 +115,11 @@
                 <div class="avatar" aria-hidden>NG</div>
                 <div>
                     <h1>Nathan GENILLON</h1>
-                    <div class="meta">Né le 12/06/2007 — Briennon (42)</div>
+                    <div class="meta">Born on 12/06/2007 — Briennon (42)</div>
                     <div class="contact">
-                        <div>Tél : 06 46 85 93 19</div>
-                        <div>Email : <a href="mailto:nathan.genillon42@gmail.com">nathan.genillon42@gmail.com</a></div>
-                        <div>Adresse : 6 Allée des Bambous, 42720 BRIENNON</div>
+                        <div>Phone: 06 46 85 93 19</div>
+                        <div>Email: <a href="mailto:nathan.genillon42@gmail.com">nathan.genillon42@gmail.com</a></div>
+                        <div>Address: 6 Allée des Bambous, 42720 BRIENNON</div>
                     </div>
                 </div>
             </header>
@@ -127,30 +127,28 @@
             <div class="grid">
                 <main>
                     <section>
-                        <h2>Projet professionnel</h2>
-                        <div class="box">Recherche entreprise pour de l'alternance pour ma deuxième année de BUT .</div>
+                        <h2>Professional Project</h2>
+                        <div class="box">Looking for a company for a work-study placement for my second year of BUT.</div>
                     </section>
 
                     <section>
-                        <h2>Stage en entreprise</h2>
-                        <div class="box">Du 19/06 au 23/062023 — Stage informatique au sein de l’entreprise ECONOCOM prestataire de
-                            service informatique de la société KNDS à Roanne (ex Nexter).
-                            Découverte des différents métiers (Helpdesk, administrateur réseau, …)</div>
-                        <div class="box">Du 02/02 au 04/02/2022 — Stage Découverte d’entreprise au sein de Manitowoc à Saint-Nizier sous
-                            Charlieu principalement sur les métiers utilisant des outils
-                            informatiques (Ingénierie, Notices technique, gestion de production,
-                            Qualité)
+                        <h2>Internship</h2>
+                        <div class="box">From 19/06 to 23/06/2023 — IT internship at ECONOCOM, IT service provider for KNDS in Roanne (formerly Nexter).
+                            Exploration of different roles (Helpdesk, Network Administrator, …)
+                        </div>
+                        <div class="box">From 02/02 to 04/02/2022 — Company discovery internship at Manitowoc in Saint-Nizier sous Charlieu,
+                            mainly in roles using IT tools (Engineering, Technical manuals, Production management, Quality)
                         </div>
                     </section>
 
                     <section>
-                        <h2>Compétences & intérêts</h2>
+                        <h2>Skills & Interests</h2>
                         <div class="box">
                             <ul>
-                                <li>Informatique : Scratch, Python, Word, Excel, PowerPoint</li>
-                                <li>Langues : Anglais et Espagnol (niveau scolaire)</li>
-                                <li>Sport : Tennis de table en competition , participe à la vie de l’association.</li>
-                                <li>Centre d'intérêt : Informatique en général — assemblage de PC, installation de Windows 11,création d'un serveur de stockage NAS et d'un serveur Mincraft.</li>
+                                <li>IT: Scratch, Python, Word, Excel, PowerPoint</li>
+                                <li>Languages: English and Spanish (school level)</li>
+                                <li>Sports: Table tennis in competition, active in the association’s life.</li>
+                                <li>Hobbies: General IT — building PCs, installing Windows 11, creating a NAS storage server and a Minecraft server.</li>
                             </ul>
                         </div>
                     </section>
@@ -158,19 +156,19 @@
 
                 <aside>
                     <section>
-                        <h2>Informations complémentaires</h2>
+                        <h2>Additional Information</h2>
                         <div class="box">
-                            <p>Permis B</p>
+                            <p>Driver's license B</p>
                         </div>
                     </section>
 
                     <section>
-                        <h2>Télécharger</h2>
+                        <h2>Download</h2>
                         <div class="box">
                             <form class="download-form" id="downloadForm">
-                                <input type="text" id="name" name="name" placeholder="Votre nom" required>
-                                <input type="email" id="email" name="email" placeholder="Votre email" required>
-                                <button type="submit">Télécharger le CV (PDF)</button>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                <button type="submit">Download CV (PDF)</button>
                             </form>
                         </div>
                     </section>
@@ -186,18 +184,18 @@
             const name = document.getElementById('name').value;
 
             if (!email || !name) {
-                alert("Veuillez remplir le nom et l'email.");
+                alert("Please fill in your name and email.");
                 return;
             }
 
-            // Vérification simple email
+            // Simple email validation
             const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!regex.test(email)) {
-                alert("Veuillez entrer un email valide.");
+                alert("Please enter a valid email address.");
                 return;
             }
 
-            // Téléchargement du fichier
+            // Download file
             const link = document.createElement('a');
             link.href = '{{ asset("cv/CV_Nathan_2025_1.pdf") }}';
             link.download = 'NathanGenillonCV.pdf';
@@ -205,7 +203,7 @@
             link.click();
             document.body.removeChild(link);
 
-            // Réinitialiser le formulaire (aucune info stockée)
+            // Reset form
             this.reset();
         });
     </script>
