@@ -57,4 +57,5 @@ final class GenillonNathanController extends AbstractController
     {
         return $this->render('genillon_nathan/EN_En_savoir_plus.html.twig');
     }
+
 }
