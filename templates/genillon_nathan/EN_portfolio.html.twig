@@ -1,10 +1,44 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello GenillonNathanController!{% endblock %}
+{% block title %}Portfolio – Skills{% endblock %}
 
 {% block body %}
-    <h1>Welcome</h1>
+    <div class="container">
 
-    <p>Hello</p>
-    <p></p>
+        <h1>My Portfolio</h1>
+        <p><strong>BUT Networks & Telecommunications – Semester 1</strong></p>
+        <hr>
+
+        <div style="display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+
+            <!-- AC11.01 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>AC11.01</h2>
+                <p>Measure voltage, current, and resistance with a multimeter</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1101.png') }}" alt="AC11.01" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+            <!-- AC11.02 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>AC11.02</h2>
+                <p>Identify hardware and software components of a digital system</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1102.png') }}" alt="AC11.02" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+            <!-- AC11.03 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>AC11.03</h2>
+                <p>Design a LAN and segment a network with VLANs</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1103.png') }}" alt="AC11.03" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 {% endblock %}

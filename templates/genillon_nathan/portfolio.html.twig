@@ -1,18 +1,44 @@
 {% extends 'base.html.twig' %}
-{% block title %}Salut GenillonNathanController!{% endblock %}
+
+{% block title %}Portfolio – Compétences{% endblock %}
+
 {% block body %}
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>nath</title>
-    </head>
+    <div class="container">
 
+        <h1>Mon portfolio</h1>
+        <p><strong>BUT Réseaux & Télécommunications – Semestre 1</strong></p>
+        <hr>
 
-        <h1>Bienvenue</h1>
+        <div style="display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
 
-            <p> salut </p>
-            <p> </p>
-    <body>
-    </body>
-    </html>
+            <!-- AC11.01 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>AC11.01</h2>
+                <p>Mesurer tension, courant et résistance avec un multimètre</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1101.png') }}" alt="AC11.01" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+            <!-- AC11.02 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>AC11.02</h2>
+                <p>Identifier composants matériels et logiciels d’un système numérique</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1102.png') }}" alt="AC11.02" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+            <!-- AC11.03 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>AC11.03</h2>
+                <p>Concevoir un LAN et segmenter un réseau avec VLAN</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1103.png') }}" alt="AC11.03" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 {% endblock %}
