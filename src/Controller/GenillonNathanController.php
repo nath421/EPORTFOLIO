@@ -83,10 +83,5 @@ final class GenillonNathanController extends AbstractController
     {
         return $this->render('genillon_nathan/ac1103.html.twig');
     }
-    #[Route('/en/ac1103', name: 'app_En_ac1103')]
-    public function ac1103En(): Response
-    {
-        return $this->render('genillon_nathan/EN_ac1103.html.twig');
-    }
 
 }
