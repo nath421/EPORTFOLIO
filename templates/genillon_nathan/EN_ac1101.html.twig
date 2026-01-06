@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC11.01 – Multimeter Skills{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC11.01 – Measuring Voltage, Current, and Resistance</h1>
+        <p><strong>Objective:</strong> Master the use of a multimeter to measure voltage, current, and resistance in a circuit.</p>
+
+        <hr>
+
+        <h2>Reflective Analysis</h2>
+        <p>
+            This activity helped me understand the importance of electrical safety and the proper use of measurement tools.
+            I learned to select the correct function and range of the multimeter, measure accurately without disturbing the circuit,
+            and interpret results critically. This strengthened my practical electronics skills and reinforced theoretical knowledge such as Ohm's law.
+        </p>
+
+        <h2>Evidence Documents</h2>
+        <ul>
+            <li>Photos showing the multimeter measuring voltage, current, and resistance.</li>
+            <li>Schematic of the circuit used for the measurements.</li>
+            <li>Measurement report with expected and obtained values and comments on discrepancies.</li>
+        </ul>
+
+        <h2>Illustrative Image</h2>
+        <div style="text-align:center; margin-top:10px;">
+            <img src="{{ asset('images/ac1101.png') }}" alt="AC11.01 Multimeter" style="max-width:100%; height:auto;">
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+            <!-- Bouton Précédent (peut être désactivé si AC11.01 est la première) -->
+            <a href="{{ path('app_portfolio_en') }}" class="btn btn-secondary">&laquo;  Back to Portfolio</a>
+
+            <!-- Bouton Suivant -->
+            <a href="{{ path('app_En_ac1102') }}" class="btn btn-primary">NEXT – AC11.02 &raquo;</a>
+        </div>
+
+    </div>
+{% endblock %}

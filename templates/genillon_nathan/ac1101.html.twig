@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC11.01 – Compétences Multimètre{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC11.01 – Mesurer tension, courant et résistance</h1>
+        <p><strong>Objectif :</strong> Maîtriser l’utilisation d’un multimètre pour mesurer la tension, le courant et la résistance dans un circuit.</p>
+
+        <hr>
+
+        <h2>Analyse réflexive</h2>
+        <p>
+            Cette activité m’a permis de comprendre l’importance de la sécurité électrique et de l’usage correct des instruments de mesure.
+            J’ai appris à sélectionner la fonction et le calibre adaptés du multimètre, à mesurer avec précision sans perturber le circuit,
+            et à interpréter les résultats de manière critique. Cette activité a renforcé mes compétences pratiques en électronique et consolidé mes connaissances théoriques telles que la loi d’Ohm.
+        </p>
+
+        <h2>Documents de preuve</h2>
+        <ul>
+            <li>Photos montrant le multimètre en train de mesurer la tension, le courant et la résistance.</li>
+            <li>Schéma du circuit utilisé pour les mesures.</li>
+            <li>Rapport de mesures indiquant les valeurs attendues et obtenues avec commentaires sur les écarts éventuels.</li>
+        </ul>
+
+        <h2>Image illustrative</h2>
+        <div style="text-align:center; margin-top:10px;">
+            <img src="{{ asset('images/ac1101.png') }}" alt="AC11.01 Multimètre" style="max-width:100%; height:auto;">
+        </div>
+
+        <!-- Boutons de navigation -->
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+            <!-- Bouton Précédent (peut être désactivé si AC11.01 est la première) -->
+            <a href="{{ path('app_portfolio') }}" class="btn btn-secondary">&laquo; Retour au portfolio</a>
+
+            <!-- Bouton Suivant -->
+            <a href="{{ path('app_ac1102') }}" class="btn btn-primary">Suivant – AC11.02 &raquo;</a>
+        </div>
+
+    </div>
+{% endblock %}

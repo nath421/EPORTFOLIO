@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC11.03 – LAN and VLAN Design{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC11.03 – Designing a LAN and Segmenting with VLANs</h1>
+        <p><strong>Objective:</strong> Design a functional LAN and segment the network using VLANs for better organization and security.</p>
+
+        <hr>
+
+        <h2>Reflective Analysis</h2>
+        <p>
+            This activity allowed me to apply network theory to practical design.
+            I learned to plan the network topology, assign VLANs, configure switches and routers,
+            and test connectivity. It also reinforced the importance of network efficiency and security.
+        </p>
+
+        <h2>Evidence Documents</h2>
+        <ul>
+            <li>Network diagram showing LAN topology and VLAN segmentation.</li>
+            <li>Configuration screenshots of switches/routers with VLAN setup.</li>
+            <li>Connectivity test results (ping tests between VLANs).</li>
+            <li>Report listing VLANs, assigned devices, IP addresses, and observations.</li>
+        </ul>
+
+        <h2>Illustrative Image</h2>
+        <div style="text-align:center; margin-top:10px;">
+            <img src="{{ asset('images/ac1103.png') }}" alt="AC11.03 LAN Design" style="max-width:100%; height:auto;">
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+            <!-- Bouton Précédent (peut être désactivé si AC11.01 est la première) -->
+            <a href="{{ path('app_En_ac1102') }}" class="btn btn-secondary">&laquo; AC11.02</a>
+
+            <!-- Bouton Suivant -->
+            <a href="{{ path('app_portfolio_en') }}" class="btn btn-primary">Back to Portfolio &raquo;</a>
+        </div>
+
+    </div>
+{% endblock %}
