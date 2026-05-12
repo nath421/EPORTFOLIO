@@ -9,30 +9,83 @@
     <style>
         html, body {
             height: 100%;
+            margin: 0;
         }
 
         body {
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
+            color: #d1d5db;
+            background: #050816;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* grille réseau / data center */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0, 255, 255, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.06) 1px, transparent 1px);
+            background-size: 60px 60px;
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        /* glow techno */
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(0,255,255,0.10), transparent 40%),
+                radial-gradient(circle at 80% 30%, rgba(0,128,255,0.10), transparent 45%),
+                radial-gradient(circle at 50% 80%, rgba(0,255,128,0.06), transparent 50%);
+            pointer-events: none;
         }
 
         main {
             flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1, h2, h3 {
+            color: #e5e7eb;
+            text-shadow: 0 0 10px rgba(0,255,255,0.15);
+        }
+
+        /* navbar un peu plus propre */
+        .navbar {
+            z-index: 10;
+        }
+
+        /* footer net */
+        footer {
+            position: relative;
+            z-index: 1;
         }
     </style>
 
     {% block stylesheets %}{% endblock %}
 </head>
+
 <body>
 
 <!-- NAVBAR -->
-{% set currentPath = app.request.pathinfo %} {# Chemin relatif /en/... ou /... #}
+{% set currentPath = app.request.pathinfo %}
 {% set enPrefix = '/en' %}
 {% set isEnglish = currentPath[:enPrefix|length] == enPrefix %}
 
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark mb-4">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ isEnglish ? enPrefix ~ path('app_genillon_nathan') : path('app_genillon_nathan') }}">Home</a>
+
+        <a class="navbar-brand" href="{{ isEnglish ? enPrefix ~ path('app_genillon_nathan') : path('app_genillon_nathan') }}">
+            Home
+        </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarColor02">
@@ -40,7 +93,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarColor02">
-            <!-- Liens principaux -->
+
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ isEnglish ? enPrefix ~ path('app_cv') : path('app_cv') }}">CV</a>
@@ -49,7 +102,9 @@
                     <a class="nav-link" href="{{ isEnglish ? enPrefix ~ path('app_portfolio') : path('app_portfolio') }}">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ isEnglish ? enPrefix ~ path('app_En_savoir_plus') : path('app_En_savoir_plus') }}">En savoir plus</a>
+                    <a class="nav-link" href="{{ isEnglish ? enPrefix ~ path('app_En_savoir_plus') : path('app_En_savoir_plus') }}">
+                        En savoir plus
+                    </a>
                 </li>
             </ul>
 
@@ -57,14 +112,13 @@
                 {% if isEnglish %}
                     {% set frenchPath = currentPath|slice(enPrefix|length) %}
                     <li class="nav-item">
-                        <a class="nav-link btn btn-outline-dark ms-2" href="{{ frenchPath|default('/') }}">
+                        <a class="nav-link btn btn-outline-light ms-2" href="{{ frenchPath|default('/') }}">
                             Français
                         </a>
                     </li>
                 {% else %}
-                    {# On est en français, bouton vers l’anglais #}
                     <li class="nav-item">
-                        <a class="nav-link btn btn-outline-dark ms-2" href="{{ enPrefix ~ currentPath }}">
+                        <a class="nav-link btn btn-outline-light ms-2" href="{{ enPrefix ~ currentPath }}">
                             English
                         </a>
                     </li>
@@ -80,7 +134,7 @@
     {% block body %}{% endblock %}
 </main>
 
-<!-- FOOTER collé en bas -->
+<!-- FOOTER -->
 <footer class="bg-dark text-light py-3 mt-auto">
     <div class="container text-center">
         <small>

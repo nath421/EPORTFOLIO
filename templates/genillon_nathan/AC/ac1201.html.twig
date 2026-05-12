@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC12.01 – Mesurer et analyser des signaux réseau{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC12.01 – Mesurer et analyser des signaux réseau</h1>
+        <p><strong>Objectif :</strong> Analyser les échanges réseau et comprendre le fonctionnement des protocoles utilisés en téléphonie IP.</p>
+
+        <hr>
+
+        <h2>Analyse réflexive</h2>
+        <p>
+            Lors des TD de téléphonie IP, j’ai utilisé un IPBX sous FreePBX ainsi que le softphone 3CX Phone afin de mettre en place et tester des communications VoIP entre plusieurs postes SIP.
+            J’ai appris à analyser les échanges réseau grâce à Wireshark en observant les différentes étapes d’un appel SIP comme l’enregistrement des téléphones, l’établissement et la terminaison des appels.
+        </p>
+
+        <p>
+            J’ai pu identifier les principales trames SIP telles que REGISTER, INVITE, RINGING, OK ou BYE ainsi que les flux RTP utilisés pour transporter la voix.
+            Cette activité m’a permis de comprendre la différence entre la signalisation SIP et le transport des données audio RTP dans une infrastructure de téléphonie sur IP.
+        </p>
+
+        <p>
+            J’ai également utilisé des outils comme ping, traceroute et tshark pour vérifier la connectivité réseau, diagnostiquer des problèmes de communication et réaliser des captures réseau directement depuis un serveur Linux.
+            Enfin, ces travaux m’ont sensibilisé aux problématiques de sécurité liées à la VoIP, notamment concernant l’écoute possible des flux RTP lorsqu’ils ne sont pas chiffrés.
+        </p>
+
+        <h2>Documents de preuve</h2>
+        <ul>
+            <li>Captures Wireshark des échanges SIP et RTP.</li>
+            <li>Configuration des postes SIP sur 3CX Phone.</li>
+            <li>Tests d’appels entre softphones et IPBX.</li>
+            <li>Analyse des flux réseau SIP / RTP.</li>
+            <li>Résultats de ping et traceroute.</li>
+            <li>Captures tshark réalisées sur le serveur IPBX.</li>
+            <li>Configuration de trunks SIP et routes sortantes.</li>
+            <li>Mise en place d’un serveur vocal interactif (SVI) sur FreePBX.</li>
+        </ul>
+
+        <h2>Image illustrative</h2>
+        <div style="text-align:center; margin-top:10px;">
+            <img src="{{ asset('images/ac1201.png') }}" alt="AC12.01 Analyse réseau VoIP" style="max-width:100%; height:auto;">
+        </div>
+
+        <!-- Boutons de navigation -->
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+            <!-- Bouton Précédent -->
+            <a href="{{ path('app_ac1205') }}" class="btn btn-primary">&laquo; Retour - ac1205</a>
+
+            <!-- Retour portfolio -->
+            <a href="{{ path('app_RT2') }}" class="btn btn-secondary">&laquo; Retour - RT2 &raquo;</a>
+
+            <!-- Bouton Suivant -->
+            <a href="{{ path('app_ac1203') }}" class="btn btn-primary">Suivant – ac1203 &raquo;</a>
+        </div>
+
+    </div>
+{% endblock %}

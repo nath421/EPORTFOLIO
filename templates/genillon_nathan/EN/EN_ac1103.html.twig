@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC11.03 – LAN Design and VLAN Segmentation{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC11.03 – Designing a LAN and Segmenting with VLANs</h1>
+        <p><strong>Objective:</strong> Design a functional Local Area Network (LAN) and segment the network using VLANs to improve organization and security.</p>
+
+        <hr>
+
+        <h2>Reflective Analysis</h2>
+        <p>
+            In the SAE21 project, I designed and configured a multi-site network with VLAN segmentation
+            (admin, services, training_A, training_B, teachers). I also created a VLSM addressing plan
+            based on the 172.16.0.0/16 network while respecting the constraints of each LAN.
+            This activity helped me understand the importance of logical structuring and segmentation
+            for network performance and security.
+        </p>
+
+        <h2>Evidence Documents</h2>
+        <ul>
+            <li>VLSM addressing plan.</li>
+            <li>Packet Tracer VLAN configuration.</li>
+            <li>Multi-site network diagram.</li>
+            <li>Inter-VLAN connectivity tests.</li>
+        </ul>
+
+        <h2>Illustrative Image</h2>
+        <div style="text-align:center; margin-top:10px;">
+            <img src="{{ asset('images/ac1103_1.png') }}" alt="AC11.03 LAN Design" style="max-width:100%; height:auto;">
+        </div>
+
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+            <!-- Previous button -->
+            <a href="{{ path('app_En_ac1102') }}" class="btn btn-primary">&laquo; Back - ac1102 </a>
+
+            <!-- Return to Portfolio -->
+            <a href="{{ path('app_En_RT1') }}" class="btn btn-secondary">&laquo; Back to RT1 &raquo;</a>
+
+            <!-- Next button -->
+            <a href="{{ path('app_En_ac1101') }}" class="btn btn-primary"> Next – ac1101 &raquo;</a>
+        </div>
+
+    </div>
+{% endblock %}

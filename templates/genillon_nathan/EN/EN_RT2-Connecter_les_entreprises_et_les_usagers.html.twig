@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RT2 - Connecting companies and users{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>RT2 - Connecting companies and users</h1>
+        <p><strong>Deployment of transmission media and systems</strong></p>
+        <p><strong>Commissioning and administration of fixed or mobile access equipment from a telecommunications operator</strong></p>
+        <p><strong>Deployment and administration of wireless access for the company</strong></p>
+        <p><strong>Deployment of communication systems</strong></p>
+
+        <hr>
+
+        <div style="display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+
+            <!-- AC12.01 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>
+                    <a href="{{ path('app_En_ac1201') }}" class="btn btn-link">AC12.01</a>
+                </h2>
+                <p>Measure and analyze network signals using tools such as Wireshark and network commands (ping, traceroute)</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1201.png') }}" alt="AC12.01" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+            <!-- AC12.03 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>
+                    <a href="{{ path('app_En_ac1203') }}" class="btn btn-link">AC12.03</a>
+                </h2>
+                <p>Analyze and understand network communication protocols (SIP, RTP) in a VoIP environment</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1203.png') }}" alt="AC12.03" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+            <!-- AC12.05 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>
+                    <a href="{{ path('app_En_ac1205') }}" class="btn btn-link">AC12.05</a>
+                </h2>
+                <p>Deploy and test network transmission media (cables, links, and equipment) to ensure connectivity</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1205.png') }}" alt="AC12.05" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+        </div>
+
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+            <!-- Previous button -->
+            <a href="{{ path('app_En_RT1') }}" class="btn btn-primary">
+                &laquo; Back - RT1
+            </a>
+
+            <!-- Portfolio -->
+            <a href="{{ path('app_portfolio_en') }}" class="btn btn-secondary">
+                &laquo; Back to portfolio &raquo;
+            </a>
+
+            <!-- Next -->
+            <a href="{{ path('app_En_RT3') }}" class="btn btn-primary">
+                Next – RT3 &raquo;
+            </a>
+        </div>
+
+    </div>
+{% endblock %}

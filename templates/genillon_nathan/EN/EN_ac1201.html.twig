@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC12.01 – Measuring and Analyzing Network Signals{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC12.01 – Measuring and Analyzing Network Signals</h1>
+        <p><strong>Objective:</strong> Analyze network exchanges and understand how protocols used in VoIP telephony work.</p>
+
+        <hr>
+
+        <h2>Reflective Analysis</h2>
+        <p>
+            During the VoIP telephony labs, I used an IPBX system with FreePBX and the 3CX Phone softphone
+            to set up and test VoIP communications between multiple SIP endpoints.
+            I learned how to analyze network exchanges using Wireshark by observing the different steps of a SIP call
+            such as phone registration, call establishment, and call termination.
+        </p>
+
+        <p>
+            I was able to identify the main SIP messages such as REGISTER, INVITE, RINGING, OK, and BYE,
+            as well as RTP streams used to carry voice data.
+            This activity helped me understand the difference between SIP signaling and RTP audio transport
+            in a VoIP infrastructure.
+        </p>
+
+        <p>
+            I also used tools such as ping, traceroute, and tshark to check network connectivity,
+            diagnose communication issues, and capture network traffic directly from a Linux server.
+            Finally, this work raised my awareness of security issues related to VoIP,
+            especially the possibility of eavesdropping on RTP streams when they are not encrypted.
+        </p>
+
+        <h2>Evidence Documents</h2>
+        <ul>
+            <li>Wireshark captures of SIP and RTP exchanges.</li>
+            <li>SIP softphone configuration on 3CX Phone.</li>
+            <li>Call tests between softphones and IPBX.</li>
+            <li>Analysis of SIP / RTP network traffic.</li>
+            <li>Ping and traceroute results.</li>
+            <li>tshark captures performed on the IPBX server.</li>
+            <li>SIP trunk and outbound route configuration.</li>
+            <li>Setup of an Interactive Voice Response (IVR) system on FreePBX.</li>
+        </ul>
+
+        <h2>Illustrative Image</h2>
+        <div style="text-align:center; margin-top:10px;">
+            <img src="{{ asset('images/ac1201.png') }}" alt="AC12.01 VoIP Network Analysis" style="max-width:100%; height:auto;">
+        </div>
+
+        <!-- Navigation buttons -->
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+            <!-- Previous button -->
+            <a href="{{ path('app_En_ac1205') }}" class="btn btn-primary">&laquo; Back - ac1205</a>
+
+            <!-- Return to portfolio -->
+            <a href="{{ path('app_En_RT2') }}" class="btn btn-secondary">&laquo; Back to RT2 &raquo;</a>
+
+            <!-- Next button -->
+            <a href="{{ path('app_En_ac1203') }}" class="btn btn-primary">Next – ac1203 &raquo;</a>
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RT1 - Administrer les réseaux et l’Internet{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>RT1 - Administrer les réseaux et l’Internet</h1>
+        <p><strong>Conception et administration de l’infrastructure du réseau informatique d’une entreprise </strong></p>
+        <p><strong>Installation et administration des services réseau informatique d’une entreprise</strong></p>
+        <p><strong>Déploiement et administration des solutions fixes pour les clients d’un opérateur de télécommunication</strong></p>
+        <hr>
+
+        <div style="display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+
+            <!-- AC11.01 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>
+                    <a href="{{ path('app_ac1101') }}" class="btn btn-link">AC11.01</a>
+                </h2>
+                <p>Mesurer tension, courant et résistance avec un multimètre</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1101.png') }}" alt="AC11.01" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+            <!-- AC11.02 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>
+                    <a href="{{ path('app_ac1102') }}" class="btn btn-link">AC11.02</a>
+                </h2>
+                <p>Identifier composants matériels et logiciels d’un système numérique</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1102.png') }}" alt="AC11.02" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+            <!-- AC11.03 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>
+                    <a href="{{ path('app_ac1103') }}" class="btn btn-link">AC11.03</a>
+                </h2>
+                <p>Concevoir un LAN et segmenter un réseau avec VLAN</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1103_1.png') }}" alt="AC11.03" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div style="display:flex; justify-content:space-between; margin-top:30px;">
+        <!-- Bouton Précédent  -->
+        <a href="{{ path('app_RT3') }}" class="btn btn-primary">&laquo; Retour - RT3 </a>
+        <!-- Bouton retoure page Portfolio  -->
+        <a href="{{ path('app_portfolio') }}" class="btn btn-secondary">&laquo; Retour au portfolio &raquo;</a>
+        <!-- Bouton Suivant -->
+        <a href="{{ path('app_RT2') }}" class="btn btn-primary"> Suivant – RT2 &raquo;</a>
+    </div>
+    </div>
+{% endblock %}

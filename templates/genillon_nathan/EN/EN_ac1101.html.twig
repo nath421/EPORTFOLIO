@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC11.01 – Multimeter Skills{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC11.01 – Measuring Voltage, Current and Resistance</h1>
+        <p><strong>Objective:</strong> Master the use of a multimeter to measure voltage, current, and resistance in an electrical circuit.</p>
+
+        <hr>
+
+        <h2>Reflective Analysis</h2>
+        <p>
+            This activity helped me understand the importance of electrical safety and the correct use of measuring instruments.
+            I learned how to select the appropriate function and range on the multimeter, how to take accurate measurements
+            without disturbing the circuit, and how to critically interpret the results.
+            This activity strengthened my practical skills in electronics and reinforced my theoretical knowledge such as Ohm’s Law.
+        </p>
+
+        <h2>Evidence Documents</h2>
+        <ul>
+            <li>Photos showing the multimeter measuring voltage, current, and resistance.</li>
+            <li>Diagram of the circuit used for the measurements.</li>
+            <li>Measurement report showing expected and obtained values with comments on possible discrepancies.</li>
+        </ul>
+
+        <h2>Illustrative Image</h2>
+        <div style="text-align:center; margin-top:10px;">
+            <img src="{{ asset('images/ac1101.png') }}" alt="AC11.01 Multimeter" style="max-width:100%; height:auto;">
+        </div>
+
+        <!-- Navigation buttons -->
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+            <!-- Previous button -->
+            <a href="{{ path('app_En_ac1103') }}" class="btn btn-primary">&laquo; Back - ac1103 </a>
+
+            <!-- Return to Portfolio -->
+            <a href="{{ path('app_En_RT1') }}" class="btn btn-secondary">&laquo; Back to RT1 &raquo;</a>
+
+            <!-- Next button -->
+            <a href="{{ path('app_En_ac1102') }}" class="btn btn-primary"> Next – ac1102 &raquo;</a>
+        </div>
+
+    </div>
+{% endblock %}

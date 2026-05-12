@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC13.03 – Translate an algorithm into a given language{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC13.03 – Translate an algorithm into a given language and environment</h1>
+
+        <p>
+            <strong>Objective :</strong>
+            Transform algorithmic logic into functional code.
+        </p>
+
+        <hr>
+
+        <h2>Reflective analysis</h2>
+
+        <p>
+            In this activity, I learned how to translate algorithmic logic into JavaScript code.
+            The goal was to transform a sequence of logical steps into an executable program.
+        </p>
+
+        <p>
+            I used React and JavaScript to implement simple features
+            such as dynamic data display and user interaction handling.
+        </p>
+
+        <p>
+            I also learned how to structure algorithmic reasoning before coding,
+            in order to make the program clear and efficient.
+        </p>
+
+        <p>
+            This activity helped me understand the link between an algorithm
+            and its implementation in a real programming language.
+        </p>
+
+        <h2>Supporting documents</h2>
+        <ul>
+            <li>Algorithm written as step-by-step logic</li>
+            <li>Translation into JavaScript / React</li>
+            <li>Execution tests</li>
+            <li>Results displayed in the browser</li>
+        </ul>
+
+        <h2>Illustrative image</h2>
+        <div style="text-align:center;">
+            <img src="{{ asset('images/ac1303.png') }}" alt="AC13.03" style="max-width:100%; height:auto;">
+        </div>
+
+        <!-- Navigation buttons -->
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+
+            <a href="{{ path('app_En_ac1302') }}" class="btn btn-primary">
+                &laquo; Back - ac1302
+            </a>
+
+            <a href="{{ path('app_En_RT3') }}" class="btn btn-secondary">
+                &laquo; Back - RT3 &raquo;
+            </a>
+
+            <a href="{{ path('app_En_ac1301') }}" class="btn btn-primary">
+                Next – ac1301 &raquo;
+            </a>
+
+        </div>
+
+    </div>
+{% endblock %}

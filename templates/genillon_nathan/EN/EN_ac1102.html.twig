@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC11.02 – System Components{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC11.02 – Identifying Hardware and Software Components</h1>
+        <p><strong>Objective:</strong> Identify and describe the main hardware and software components of a digital system.</p>
+
+        <hr>
+
+        <h2>Reflective Analysis</h2>
+        <p>
+            This activity helped me understand the interaction between hardware and software,
+            effectively identify system components, and explain their roles.
+            I also learned the importance of compatibility and gained experience in documenting and analyzing a system configuration.
+        </p>
+
+        <h2>Evidence Documents</h2>
+        <ul>
+            <li>Photos or screenshots of hardware components with labels.</li>
+            <li>Screenshots showing the operating system and installed software.</li>
+            <li>System diagram showing the main components and their connections.</li>
+            <li>Report listing hardware and software components with their functions.</li>
+        </ul>
+
+        <h2>Illustrative Image</h2>
+        <div style="text-align:center; margin-top:10px;">
+            <img src="{{ asset('images/ac1102.png') }}" alt="AC11.02 System Components" style="max-width:100%; height:auto;">
+        </div>
+
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+            <!-- Previous button -->
+            <a href="{{ path('app_En_ac1101') }}" class="btn btn-primary">&laquo; Back - ac1101 </a>
+
+            <!-- Return to Portfolio -->
+            <a href="{{ path('app_En_RT1') }}" class="btn btn-secondary">&laquo; Back to RT1 &raquo;</a>
+
+            <!-- Next button -->
+            <a href="{{ path('app_En_ac1103') }}" class="btn btn-primary"> Next – ac1103 &raquo;</a>
+        </div>
+
+    </div>
+{% endblock %}

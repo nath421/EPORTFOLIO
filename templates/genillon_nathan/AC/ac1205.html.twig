@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC12.05 – Déployer des supports de transmission{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC12.05 – Déployer des supports de transmission</h1>
+
+        <p>
+            <strong>Objectif :</strong>
+            Mettre en place et tester différents supports de transmission
+            afin d’assurer le bon fonctionnement des communications réseau.
+        </p>
+
+        <hr>
+
+        <h2>Analyse réflexive</h2>
+
+        <p>
+            Lors des travaux pratiques en téléphonie IP avec FreePBX et les softphones SIP,
+            j’ai appris à comprendre comment les communications réseau sont établies
+            entre différents équipements à travers un réseau local.
+        </p>
+
+        <p>
+            J’ai réalisé la connexion de plusieurs postes téléphoniques via un IPBX,
+            en configurant des extensions SIP et en testant les appels entre utilisateurs.
+            Ces manipulations m’ont permis de voir concrètement comment les échanges
+            passent par le réseau et utilisent différents protocoles.
+        </p>
+
+        <p>
+            J’ai également utilisé des outils comme Wireshark afin d’observer les échanges
+            de données lors des appels et des enregistrements des téléphones sur l’IPBX.
+        </p>
+
+        <p>
+            Grâce aux tests de connectivité (ping) et aux configurations des postes SIP,
+            j’ai pu vérifier le bon fonctionnement du réseau et identifier les étapes
+            nécessaires à l’établissement d’une communication VoIP.
+        </p>
+
+        <p>
+            Cette activité m’a permis de comprendre le rôle du réseau dans la transmission
+            de la voix et le fonctionnement global d’une infrastructure de téléphonie IP.
+        </p>
+
+        <h2>Documents de preuve</h2>
+
+        <ul>
+            <li>Configuration des postes SIP sur FreePBX.</li>
+            <li>Configuration des softphones 3CX Phone.</li>
+            <li>Tests d’appels entre utilisateurs.</li>
+            <li>Captures Wireshark des échanges SIP/RTP.</li>
+            <li>Résultats de tests de connectivité (ping).</li>
+        </ul>
+
+        <h2>Image illustrative</h2>
+
+        <div style="text-align:center; margin-top:10px;">
+            <img src="{{ asset('images/ac1205.png') }}"
+                 alt="AC12.05 Téléphonie IP et réseau"
+                 style="max-width:100%; height:auto;">
+        </div>
+
+        <!-- Boutons de navigation -->
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+
+            <!-- Bouton précédent -->
+            <a href="{{ path('app_ac1203') }}" class="btn btn-primary">
+                &laquo; Retour - ac1203
+            </a>
+
+            <!-- Retour RT2 -->
+            <a href="{{ path('app_RT2') }}" class="btn btn-secondary">
+                &laquo; Retour - RT2 &raquo;
+            </a>
+
+            <!-- Bouton suivant -->
+            <a href="{{ path('app_ac1201') }}" class="btn btn-primary">
+                Suivant – ac1201 &raquo;
+            </a>
+
+        </div>
+
+    </div>
+{% endblock %}

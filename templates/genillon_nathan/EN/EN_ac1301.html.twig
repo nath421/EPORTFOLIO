@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC13.01 – Using a computer system and its tools{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC13.01 – Using a computer system and its tools</h1>
+
+        <p>
+            <strong>Objective :</strong>
+            Install, configure, and use the tools required for software development.
+        </p>
+
+        <hr>
+
+        <h2>Reflective analysis</h2>
+
+        <p>
+            In this activity, I learned how to use a complete development environment
+            to work on software projects.
+        </p>
+
+        <p>
+            I installed and configured essential tools such as Node.js, Git, and Visual Studio Code.
+            These tools allow the creation, management, and execution of web projects.
+        </p>
+
+        <p>
+            I used the terminal to execute various commands such as installing dependencies,
+            initializing projects, and managing versions with Git.
+        </p>
+
+        <p>
+            This activity helped me understand how a professional development workstation works
+            and how development tools are organized in a real company environment.
+        </p>
+
+        <h2>Supporting documents</h2>
+        <ul>
+            <li>Installation of Node.js and Git</li>
+            <li>Use of the terminal (npm, git)</li>
+            <li>VS Code configuration</li>
+            <li>Creation of a React project</li>
+        </ul>
+
+        <h2>Illustrative image</h2>
+        <div style="text-align:center;">
+            <img src="{{ asset('images/ac1301.png') }}" alt="AC13.01" style="max-width:100%; height:auto;">
+        </div>
+
+        <!-- Navigation buttons -->
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+
+            <a href="{{ path('app_En_ac1303') }}" class="btn btn-primary">
+                &laquo; Back - ac1303
+            </a>
+
+            <a href="{{ path('app_En_RT3') }}" class="btn btn-secondary">
+                &laquo; Back - RT3 &raquo;
+            </a>
+
+            <a href="{{ path('app_En_ac1302') }}" class="btn btn-primary">
+                Next – ac1302 &raquo;
+            </a>
+
+        </div>
+
+    </div>
+{% endblock %}

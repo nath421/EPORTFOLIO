@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RT3 - Creating tools and software applications for Networks & Telecommunications{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>RT3 - Creating tools and software applications for Networks & Telecommunications</h1>
+
+        <p><strong>Design, deployment and maintenance of an enterprise information system</strong></p>
+        <p><strong>Automation of software deployment and maintenance tools</strong></p>
+        <p><strong>Development of internal IT tools for a team</strong></p>
+
+        <hr>
+
+        <div style="display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+
+            <!-- AC13.01 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>
+                    <a href="{{ path('app_En_ac1301') }}" class="btn btn-link">AC13.01</a>
+                </h2>
+                <p>Install and configure a web development environment (Node.js, Git, VS Code, GitHub/Supabase/Vercel accounts)</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1301.png') }}" alt="AC13.01" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+            <!-- AC13.02 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>
+                    <a href="{{ path('app_En_ac1302') }}" class="btn btn-link">AC13.02</a>
+                </h2>
+                <p>Create and initialize a React web application using Vite and structure a front-end project</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1302.png') }}" alt="AC13.02" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+            <!-- AC13.03 -->
+            <div style="flex:1; min-width:250px; border:1px solid #ccc; padding:10px; text-align:center;">
+                <h2>
+                    <a href="{{ path('app_En_ac1303') }}" class="btn btn-link">AC13.03</a>
+                </h2>
+                <p>Version a project with Git and GitHub, then deploy a web application automatically using Vercel (CI/CD)</p>
+                <div style="margin-top:10px;">
+                    <img src="{{ asset('images/ac1303.png') }}" alt="AC13.03" style="max-width:100%; height:auto;">
+                </div>
+            </div>
+
+        </div>
+
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+            <!-- Previous button -->
+            <a href="{{ path('app_En_RT2') }}" class="btn btn-primary">&laquo; Back - RT2</a>
+
+            <!-- Portfolio -->
+            <a href="{{ path('app_portfolio_en') }}" class="btn btn-secondary">&laquo; Back to portfolio &raquo;</a>
+
+            <!-- Next -->
+            <a href="{{ path('app_En_RT1') }}" class="btn btn-primary">Next – RT1 &raquo;</a>
+        </div>
+
+    </div>
+{% endblock %}

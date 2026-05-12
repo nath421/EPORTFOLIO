@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC13.02 – Read, execute, debug and modify a program{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC13.02 – Read, execute, debug and modify a program</h1>
+
+        <p>
+            <strong>Objective :</strong>
+            Understand an existing program and modify it to meet a specific need.
+        </p>
+
+        <hr>
+
+        <h2>Reflective analysis</h2>
+
+        <p>
+            In this activity, I worked on an existing React application.
+            I learned how to read and understand the structure of the source code.
+        </p>
+
+        <p>
+            I executed the program locally in order to verify its behavior
+            and observe how it works in the browser.
+        </p>
+
+        <p>
+            I then modified some components to display custom data
+            and improve the user interface.
+        </p>
+
+        <p>
+            This activity helped me develop my ability to analyze existing code,
+            fix errors, and adapt a program to a specific requirement.
+        </p>
+
+        <h2>Supporting documents</h2>
+        <ul>
+            <li>Analyzed React source code</li>
+            <li>Modifications of JSX components</li>
+            <li>Local execution of the project</li>
+            <li>Applied fixes and corrections</li>
+        </ul>
+
+        <h2>Illustrative image</h2>
+        <div style="text-align:center;">
+            <img src="{{ asset('images/ac1302.png') }}" alt="AC13.02" style="max-width:100%; height:auto;">
+        </div>
+
+        <!-- Navigation buttons -->
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+
+            <a href="{{ path('app_En_ac1301') }}" class="btn btn-primary">
+                &laquo; Back - ac1301
+            </a>
+
+            <a href="{{ path('app_En_RT3') }}" class="btn btn-secondary">
+                &laquo; Back - RT3 &raquo;
+            </a>
+
+            <a href="{{ path('app_En_ac1303') }}" class="btn btn-primary">
+                Next – ac1303 &raquo;
+            </a>
+
+        </div>
+
+    </div>
+{% endblock %}

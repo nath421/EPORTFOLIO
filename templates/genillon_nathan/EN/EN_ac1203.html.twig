@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC12.03 – Connecting ToIP systems{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC12.03 – Connecting ToIP systems</h1>
+
+        <p>
+            <strong>Objective :</strong>
+            Set up and configure a Voice over IP (VoIP) infrastructure
+            using a FreePBX IPBX and SIP softphones.
+        </p>
+
+        <hr>
+
+        <h2>Reflective analysis</h2>
+
+        <p>
+            During the various VoIP labs carried out using FreePBX and the
+            3CX Phone softphone, I learned how to connect and configure several
+            ToIP systems within a virtual network environment.
+        </p>
+
+        <p>
+            I configured SIP endpoints, created telephone extensions,
+            set up SIP trunks, and configured outbound routes in order
+            to enable communication between multiple IPBX systems.
+            These tasks helped me understand how VoIP communications work
+            and how network devices exchange data in a telephony infrastructure.
+        </p>
+
+        <p>
+            I also used several softphones such as 3CX Phone,
+            MicroSIP, Zoiper, and Ekiga to test internal and inter-site
+            communications. I learned how to configure SIP parameters such as
+            username, password, server IP address, and transport protocols.
+        </p>
+
+        <p>
+            Using Wireshark and tshark, I analyzed SIP and RTP traffic
+            to verify call functionality and identify potential communication issues.
+            I also understood the role of Interactive Voice Response (IVR) systems,
+            call groups, and call forwarding within a ToIP infrastructure.
+        </p>
+
+        <p>
+            This activity allowed me to develop practical skills in
+            VoIP system administration and better understand the integration
+            of communication services within a corporate network.
+        </p>
+
+        <h2>Supporting documents</h2>
+
+        <ul>
+            <li>Configuration of SIP extensions on FreePBX.</li>
+            <li>Call screenshots using 3CX Phone and Zoiper.</li>
+            <li>Configuration of SIP trunks between two IPBX systems.</li>
+            <li>Analysis of SIP and RTP traffic using Wireshark.</li>
+            <li>Setup of outbound routes and dial plans.</li>
+            <li>Configuration of an Interactive Voice Response (IVR) system.</li>
+            <li>tshark captures performed on the Linux IPBX server.</li>
+        </ul>
+
+        <h2>Illustrative image</h2>
+
+        <div style="text-align:center; margin-top:10px;">
+            <img src="{{ asset('images/ac1203.png') }}"
+                 alt="AC12.03 VoIP systems"
+                 style="max-width:100%; height:auto;">
+        </div>
+
+        <!-- Navigation buttons -->
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+
+            <!-- Previous button -->
+            <a href="{{ path('app_En_ac1201') }}" class="btn btn-primary">
+                &laquo; Back - ac1201
+            </a>
+
+            <!-- Back to RT2 -->
+            <a href="{{ path('app_En_RT2') }}" class="btn btn-secondary">
+                &laquo; Back - RT2 &raquo;
+            </a>
+
+            <!-- Next button -->
+            <a href="{{ path('app_En_ac1205') }}" class="btn btn-primary">
+                Next – ac1205 &raquo;
+            </a>
+
+        </div>
+
+    </div>
+{% endblock %}

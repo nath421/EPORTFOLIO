@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC13.02 – Lire, exécuter, corriger et modifier un programme{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC13.02 – Lire, exécuter, corriger et modifier un programme</h1>
+
+        <p>
+            <strong>Objectif :</strong>
+            Comprendre un programme existant et le modifier pour répondre à un besoin.
+        </p>
+
+        <hr>
+
+        <h2>Analyse réflexive</h2>
+
+        <p>
+            Dans cette activité, j’ai travaillé sur une application React existante.
+            J’ai appris à lire et comprendre la structure du code source.
+        </p>
+
+        <p>
+            J’ai exécuté le programme en local afin de vérifier son fonctionnement
+            et observer son comportement dans le navigateur.
+        </p>
+
+        <p>
+            J’ai ensuite modifié certains composants afin d’afficher des données personnalisées
+            et améliorer l’interface utilisateur.
+        </p>
+
+        <p>
+            Cette activité m’a permis de développer ma capacité à analyser un code existant,
+            corriger des erreurs et adapter un programme à un besoin précis.
+        </p>
+
+        <h2>Documents de preuve</h2>
+        <ul>
+            <li>Code source React analysé</li>
+            <li>Modifications des composants JSX</li>
+            <li>Exécution locale du projet</li>
+            <li>Corrections apportées</li>
+        </ul>
+
+        <h2>Image illustrative</h2>
+        <div style="text-align:center;">
+            <img src="{{ asset('images/ac1302.png') }}" alt="AC13.02" style="max-width:100%; height:auto;">
+        </div>
+
+        <!-- Boutons de navigation -->
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+
+            <a href="{{ path('app_ac1301') }}" class="btn btn-primary">
+                &laquo; Retour - ac1301
+            </a>
+
+            <a href="{{ path('app_RT3') }}" class="btn btn-secondary">
+                &laquo; Retour - RT3 &raquo;
+            </a>
+
+            <a href="{{ path('app_ac1303') }}" class="btn btn-primary">
+                Suivant – ac1303 &raquo;
+            </a>
+
+        </div>
+
+    </div>
+{% endblock %}

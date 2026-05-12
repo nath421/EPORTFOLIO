@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC11.03 – Conception LAN et VLAN{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC11.03 – Concevoir un LAN et segmenter avec VLAN</h1>
+        <p><strong>Objectif :</strong> Concevoir un réseau local fonctionnel (LAN) et segmenter le réseau avec des VLAN pour une meilleure organisation et sécurité.</p>
+
+        <hr>
+
+        <h2>Analyse réflexive</h2>
+        <p>
+            Dans la SAE21, j’ai conçu et configuré un réseau multi-sites avec segmentation en VLAN (admin, services, formation_A, formation_B, enseignants). J’ai également réalisé un plan d’adressage VLSM à partir de 172.16.0.0/16 en respectant les contraintes de chaque LAN. Cette activité m’a permis de comprendre l’importance de la structuration logique et de la segmentation pour la performance et la sécurité du réseau.
+        </p>
+
+        <h2>Documents de preuve</h2>
+        <ul>
+            <li>Plan d’adressage VLSM.</li>
+            <li>Configuration VLAN Packet Tracer.</li>
+            <li>Schéma réseau multi-sites.</li>
+            <li>Tests de connectivité inter-VLAN.</li>
+        </ul>
+
+        <h2>Image illustrative</h2>
+        <div style="text-align:center; margin-top:10px;">
+            <img src="{{ asset('images/ac1103_1.png') }}" alt="AC11.03 Conception LAN" style="max-width:100%; height:auto;">
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+            <!-- Bouton Précédent  -->
+            <a href="{{ path('app_ac1102') }}" class="btn btn-primary">&laquo; Retour - ac1102 </a>
+            <!-- Bouton retoure page Portfolio  -->
+            <a href="{{ path('app_RT1') }}" class="btn btn-secondary">&laquo; Retour - RT1 &raquo;</a>
+            <!-- Bouton Suivant -->
+            <a href="{{ path('app_ac1101') }}" class="btn btn-primary"> Suivant – ac1101 &raquo;</a>
+        </div>
+
+    </div>
+{% endblock %}

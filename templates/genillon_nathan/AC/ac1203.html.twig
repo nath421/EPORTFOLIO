@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC12.03 – Connecter les systèmes de ToIP{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC12.03 – Connecter les systèmes de ToIP</h1>
+
+        <p>
+            <strong>Objectif :</strong>
+            Mettre en place et configurer une infrastructure de téléphonie sur IP
+            à l’aide d’un IPBX FreePBX et de softphones SIP.
+        </p>
+
+        <hr>
+
+        <h2>Analyse réflexive</h2>
+
+        <p>
+            Lors des différents TD de téléphonie IP réalisés avec FreePBX et le softphone
+            3CX Phone, j’ai appris à connecter et configurer plusieurs systèmes de ToIP
+            dans un environnement réseau virtuel.
+        </p>
+
+        <p>
+            J’ai configuré des postes SIP, créé des extensions téléphoniques,
+            paramétré des trunks SIP et mis en place des routes sortantes afin
+            de permettre la communication entre plusieurs IPBX.
+            Ces manipulations m’ont permis de comprendre le fonctionnement
+            des communications VoIP et des échanges entre différents équipements réseau.
+        </p>
+
+        <p>
+            J’ai également utilisé plusieurs softphones comme 3CX Phone,
+            MicroSIP, Zoiper et Ekiga afin de tester les communications
+            internes et intersites. J’ai appris à configurer les paramètres SIP
+            tels que l’identifiant, le mot de passe, l’adresse IP du serveur
+            et les protocoles de transport.
+        </p>
+
+        <p>
+            Grâce à Wireshark et tshark, j’ai analysé les échanges SIP et RTP
+            afin de vérifier le bon fonctionnement des appels et identifier
+            d’éventuels problèmes de communication.
+            J’ai aussi compris le rôle des serveurs vocaux interactifs (SVI),
+            des groupements d’appels et des renvois dans une infrastructure ToIP.
+        </p>
+
+        <p>
+            Cette activité m’a permis de développer des compétences pratiques
+            en administration d’un système de téléphonie IP et de mieux comprendre
+            l’intégration des services de communication dans un réseau d’entreprise.
+        </p>
+
+        <h2>Documents de preuve</h2>
+
+        <ul>
+            <li>Configuration des extensions SIP sur FreePBX.</li>
+            <li>Captures des appels réalisés avec 3CX Phone et Zoiper.</li>
+            <li>Configuration des trunks SIP entre deux IPBX.</li>
+            <li>Analyse des flux SIP et RTP avec Wireshark.</li>
+            <li>Mise en place de routes sortantes et plans de numérotation.</li>
+            <li>Configuration d’un serveur vocal interactif (SVI).</li>
+            <li>Captures tshark réalisées sur le serveur IPBX Linux.</li>
+        </ul>
+
+        <h2>Image illustrative</h2>
+
+        <div style="text-align:center; margin-top:10px;">
+            <img src="{{ asset('images/ac1203.png') }}"
+                 alt="AC12.03 Téléphonie IP"
+                 style="max-width:100%; height:auto;">
+        </div>
+
+        <!-- Boutons de navigation -->
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+
+            <!-- Bouton précédent -->
+            <a href="{{ path('app_ac1201') }}" class="btn btn-primary">
+                &laquo; Retour - ac1201
+            </a>
+
+            <!-- Retour RT2 -->
+            <a href="{{ path('app_RT2') }}" class="btn btn-secondary">
+                &laquo; Retour - RT2 &raquo;
+            </a>
+
+            <!-- Bouton suivant -->
+            <a href="{{ path('app_ac1205') }}" class="btn btn-primary">
+                Suivant – ac1205 &raquo;
+            </a>
+
+        </div>
+
+    </div>
+{% endblock %}

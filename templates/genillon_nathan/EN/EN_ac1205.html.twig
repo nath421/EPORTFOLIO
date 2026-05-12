@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AC12.05 – Deploying transmission media{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>AC12.05 – Deploying transmission media</h1>
+
+        <p>
+            <strong>Objective :</strong>
+            Set up and test different transmission media
+            in order to ensure proper network communication.
+        </p>
+
+        <hr>
+
+        <h2>Reflective analysis</h2>
+
+        <p>
+            During the VoIP practical work using FreePBX and SIP softphones,
+            I learned how network communications are established between
+            different devices within a local network.
+        </p>
+
+        <p>
+            I configured several telephone endpoints through an IPBX,
+            setting up SIP extensions and testing calls between users.
+            These tasks allowed me to understand how voice communications
+            are transmitted through the network using different protocols.
+        </p>
+
+        <p>
+            I also used tools such as Wireshark to observe data exchanges
+            during phone calls and during the registration process of devices
+            on the IPBX.
+        </p>
+
+        <p>
+            Thanks to connectivity tests (ping) and SIP phone configuration,
+            I was able to verify the correct operation of the network
+            and identify the steps required to establish a VoIP communication.
+        </p>
+
+        <p>
+            This activity helped me understand the role of the network
+            in voice transmission and the overall functioning of a VoIP infrastructure.
+        </p>
+
+        <h2>Supporting documents</h2>
+
+        <ul>
+            <li>Configuration of SIP phones on FreePBX.</li>
+            <li>Configuration of 3CX Phone softphones.</li>
+            <li>Call tests between users.</li>
+            <li>Wireshark captures of SIP/RTP exchanges.</li>
+            <li>Network connectivity test results (ping).</li>
+        </ul>
+
+        <h2>Illustrative image</h2>
+
+        <div style="text-align:center; margin-top:10px;">
+            <img src="{{ asset('images/ac1205.png') }}"
+                 alt="AC12.05 VoIP and network"
+                 style="max-width:100%; height:auto;">
+        </div>
+
+        <!-- Navigation buttons -->
+        <div style="display:flex; justify-content:space-between; margin-top:30px;">
+
+            <!-- Previous button -->
+            <a href="{{ path('app_En_ac1203') }}" class="btn btn-primary">
+                &laquo; Back - ac1203
+            </a>
+
+            <!-- Back to RT2 -->
+            <a href="{{ path('app_En_RT2') }}" class="btn btn-secondary">
+                &laquo; Back - RT2 &raquo;
+            </a>
+
+            <!-- Next button -->
+            <a href="{{ path('app_En_ac1201') }}" class="btn btn-primary">
+                Next – ac1201 &raquo;
+            </a>
+
+        </div>
+
+    </div>
+{% endblock %}

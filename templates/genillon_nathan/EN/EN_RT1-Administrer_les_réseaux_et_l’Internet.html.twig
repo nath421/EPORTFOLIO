@@ -1,12 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Portfolio – Skills{% endblock %}
+{% block title %}RT1 - Administer networks and the Internet{% endblock %}
 
 {% block body %}
     <div class="container">
 
-        <h1>My Portfolio</h1>
-        <p><strong>BUT Networks & Telecommunications – Semester 1</strong></p>
+        <h1>RT1 - Administer networks and the Internet</h1>
+
+        <p><strong>Design and administration of a company’s IT network infrastructure</strong></p>
+        <p><strong>Installation and administration of enterprise network services</strong></p>
+        <p><strong>Deployment and administration of fixed solutions for telecommunications operator customers</strong></p>
+
         <hr>
 
         <div style="display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
@@ -16,7 +20,7 @@
                 <h2>
                     <a href="{{ path('app_En_ac1101') }}" class="btn btn-link">AC11.01</a>
                 </h2>
-                <p>Measure voltage, current, and resistance with a multimeter</p>
+                <p>Measure voltage, current and resistance using a multimeter</p>
                 <div style="margin-top:10px;">
                     <img src="{{ asset('images/ac1101.png') }}" alt="AC11.01" style="max-width:100%; height:auto;">
                 </div>
@@ -38,13 +42,31 @@
                 <h2>
                     <a href="{{ path('app_En_ac1103') }}" class="btn btn-link">AC11.03</a>
                 </h2>
-                <p>Design a LAN and segment a network with VLANs</p>
+                <p>Design a LAN and segment a network using VLANs</p>
                 <div style="margin-top:10px;">
-                    <img src="{{ asset('images/ac1103.png') }}" alt="AC11.03" style="max-width:100%; height:auto;">
+                    <img src="{{ asset('images/ac1103_1.png') }}" alt="AC11.03" style="max-width:100%; height:auto;">
                 </div>
             </div>
 
         </div>
 
     </div>
+
+    <div style="display:flex; justify-content:space-between; margin-top:30px;">
+        <!-- Previous button -->
+        <a href="{{ path('app_En_RT3') }}" class="btn btn-primary">
+            &laquo; Back - RT3
+        </a>
+
+        <!-- Portfolio -->
+        <a href="{{ path('app_portfolio_en') }}" class="btn btn-secondary">
+            &laquo; Back to portfolio &raquo;
+        </a>
+
+        <!-- Next -->
+        <a href="{{ path('app_En_RT2') }}" class="btn btn-primary">
+            Next – RT2 &raquo;
+        </a>
+    </div>
+
 {% endblock %}
