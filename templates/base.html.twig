@@ -22,7 +22,6 @@
             position: relative;
         }
 
-        /* grille réseau / data center */
         body::before {
             content: "";
             position: fixed;
@@ -35,7 +34,6 @@
             pointer-events: none;
         }
 
-        /* glow techno */
         body::after {
             content: "";
             position: fixed;
@@ -58,12 +56,10 @@
             text-shadow: 0 0 10px rgba(0,255,255,0.15);
         }
 
-        /* navbar un peu plus propre */
         .navbar {
             z-index: 10;
         }
 
-        /* footer net */
         footer {
             position: relative;
             z-index: 1;
@@ -76,14 +72,12 @@
 <body>
 
 <!-- NAVBAR -->
-{% set currentPath = app.request.pathinfo %}
-{% set enPrefix = '/en' %}
-{% set isEnglish = currentPath[:enPrefix|length] == enPrefix %}
+{% set currentRoute = app.request.attributes.get('_route') %}
 
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark mb-4">
     <div class="container-fluid">
 
-        <a class="navbar-brand" href="{{ isEnglish ? enPrefix ~ path('app_genillon_nathan') : path('app_genillon_nathan') }}">
+        <a class="navbar-brand" href="{{ path(isEnglish ? 'app_genillon_nathan_en' : 'app_genillon_nathan') }}">
             Home
         </a>
 
@@ -95,34 +89,45 @@
         <div class="collapse navbar-collapse" id="navbarColor02">
 
             <ul class="navbar-nav me-auto">
+
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ isEnglish ? enPrefix ~ path('app_cv') : path('app_cv') }}">CV</a>
+                    <a class="nav-link" href="{{ isEnglish ? path('app_cv_en') : path('app_cv') }}">
+                        CV
+                    </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ isEnglish ? enPrefix ~ path('app_portfolio') : path('app_portfolio') }}">Portfolio</a>
+                    <a class="nav-link" href="{{ isEnglish ? path('app_portfolio_en') : path('app_portfolio') }}">
+                        Portfolio
+                    </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ isEnglish ? enPrefix ~ path('app_En_savoir_plus') : path('app_En_savoir_plus') }}">
+                    <a class="nav-link" href="{{ isEnglish ? path('app_En_savoir_plus_en') : path('app_En_savoir_plus') }}">
                         En savoir plus
                     </a>
                 </li>
+
             </ul>
 
             <ul class="navbar-nav ms-auto">
+
                 {% if isEnglish %}
-                    {% set frenchPath = currentPath|slice(enPrefix|length) %}
                     <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light ms-2" href="{{ frenchPath|default('/') }}">
+                        <a class="nav-link btn btn-outline-light ms-2"
+                           href="{{ path(currentRoute|replace({'_en': ''})) }}">
                             Français
                         </a>
                     </li>
                 {% else %}
                     <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light ms-2" href="{{ enPrefix ~ currentPath }}">
+                        <a class="nav-link btn btn-outline-light ms-2"
+                           href="{{ path(currentRoute ~ '_en') }}">
                             English
                         </a>
                     </li>
                 {% endif %}
+
             </ul>
 
         </div>
@@ -143,7 +148,6 @@
     </div>
 </footer>
 
-<!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
