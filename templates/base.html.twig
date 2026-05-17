@@ -70,12 +70,7 @@
 </head>
 
 <body>
-
-<!-- NAVBAR -->
-
-{# ✅ FIX IMPORTANT : variable définie ici #}
 {% set isEnglish = app.request.pathinfo starts with '/en' %}
-{% set currentRoute = app.request.attributes.get('_route') %}
 
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark mb-4">
     <div class="container-fluid">
