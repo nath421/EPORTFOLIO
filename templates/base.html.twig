@@ -1,83 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Bienvenue{% endblock %}</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/quartz/bootstrap.min.css">
-
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-
-        body {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            color: #d1d5db;
-            background: #050816;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(0, 255, 255, 0.06) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 255, 255, 0.06) 1px, transparent 1px);
-            background-size: 60px 60px;
-            opacity: 0.35;
-            pointer-events: none;
-        }
-
-        body::after {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background:
-                radial-gradient(circle at 20% 20%, rgba(0,255,255,0.10), transparent 40%),
-                radial-gradient(circle at 80% 30%, rgba(0,128,255,0.10), transparent 45%),
-                radial-gradient(circle at 50% 80%, rgba(0,255,128,0.06), transparent 50%);
-            pointer-events: none;
-        }
-
-        main {
-            flex: 1;
-            position: relative;
-            z-index: 1;
-        }
-
-        h1, h2, h3 {
-            color: #e5e7eb;
-            text-shadow: 0 0 10px rgba(0,255,255,0.15);
-        }
-
-        .navbar {
-            z-index: 10;
-        }
-
-        footer {
-            position: relative;
-            z-index: 1;
-        }
-    </style>
-
-    {% block stylesheets %}{% endblock %}
-</head>
-
-<body>
-
-<!-- NAVBAR -->
-{% set currentRoute = app.request.attributes.get('_route') %}
-
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark mb-4">
     <div class="container-fluid">
 
-        <a class="navbar-brand" href="{{ path(isEnglish ? 'app_genillon_nathan_en' : 'app_genillon_nathan') }}">
+        <a class="navbar-brand"
+           href="{{ isEnglish ? path('app_genillon_nathan_en') : path('app_genillon_nathan') }}">
             Home
         </a>
 
@@ -91,19 +16,22 @@
             <ul class="navbar-nav me-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ isEnglish ? path('app_cv_en') : path('app_cv') }}">
+                    <a class="nav-link"
+                       href="{{ isEnglish ? path('app_cv_en') : path('app_cv') }}">
                         CV
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ isEnglish ? path('app_portfolio_en') : path('app_portfolio') }}">
+                    <a class="nav-link"
+                       href="{{ isEnglish ? path('app_portfolio_en') : path('app_portfolio') }}">
                         Portfolio
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ isEnglish ? path('app_En_savoir_plus_en') : path('app_En_savoir_plus') }}">
+                    <a class="nav-link"
+                       href="{{ isEnglish ? path('app_En_savoir_plus_en') : path('app_En_savoir_plus') }}">
                         En savoir plus
                     </a>
                 </li>
@@ -111,44 +39,23 @@
             </ul>
 
             <ul class="navbar-nav ms-auto">
-
                 {% if isEnglish %}
                     <li class="nav-item">
                         <a class="nav-link btn btn-outline-light ms-2"
-                           href="{{ path(currentRoute|replace({'_en': ''})) }}">
+                           href="{{ currentPath|replace({'/en': ''}) }}">
                             Français
                         </a>
                     </li>
                 {% else %}
                     <li class="nav-item">
                         <a class="nav-link btn btn-outline-light ms-2"
-                           href="{{ path(currentRoute ~ '_en') }}">
+                           href="/en{{ currentPath }}">
                             English
                         </a>
                     </li>
                 {% endif %}
-
             </ul>
 
         </div>
     </div>
 </nav>
-
-<!-- CONTENU -->
-<main>
-    {% block body %}{% endblock %}
-</main>
-
-<!-- FOOTER -->
-<footer class="bg-dark text-light py-3 mt-auto">
-    <div class="container text-center">
-        <small>
-            2025 © Genillon Nathan - Tous droits réservés - Conditions générales - Politique de confidentialité
-        </small>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
