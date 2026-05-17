@@ -70,12 +70,16 @@
 </head>
 
 <body>
+
 {% set isEnglish = app.request.pathinfo starts with '/en' %}
+{% set currentRoute = app.request.attributes.get('_route') %}
+{% set routeParams = app.request.attributes.get('_route_params') %}
 
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark mb-4">
     <div class="container-fluid">
 
-        <a class="navbar-brand" href="{{ path(isEnglish ? 'app_genillon_nathan_en' : 'app_genillon_nathan') }}">
+        <a class="navbar-brand"
+           href="{{ path(isEnglish ? 'app_genillon_nathan_en' : 'app_genillon_nathan') }}">
             Home
         </a>
 
@@ -113,14 +117,14 @@
                 {% if isEnglish %}
                     <li class="nav-item">
                         <a class="nav-link btn btn-outline-light ms-2"
-                           href="{{ path(currentRoute|replace({'_en': ''})) }}">
+                           href="{{ path(currentRoute|replace({'_en': ''}), routeParams) }}">
                             Français
                         </a>
                     </li>
                 {% else %}
                     <li class="nav-item">
                         <a class="nav-link btn btn-outline-light ms-2"
-                           href="{{ path(currentRoute ~ '_en') }}">
+                           href="{{ path(currentRoute ~ '_en', routeParams) }}">
                             English
                         </a>
                     </li>
